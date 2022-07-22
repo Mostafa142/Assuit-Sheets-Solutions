@@ -1,13 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
-int num;
-cin>>num;
-int fDigit=num%10;
-int sDigit=num/10;
-if(fDigit%sDigit==0 || sDigit%fDigit==0){
-	cout<<"YES"<<endl;
-}else{
-	cout<<"NO"<<endl;
-}
+long long eye,mouth,body,res;
+	cin>>eye>>mouth>>body;
+	if(eye==0||body==0){
+		cout<<0<<endl;
+	}else{
+		if((mouth>=eye&&mouth>=body)||(mouth>=eye&&mouth<body)||(mouth<eye&&mouth>=body)){
+			res=min(eye,body);
+			cout<<res<<endl;
+		}else if(mouth<eye&&mouth<body){
+			res=mouth;
+			eye-=mouth;
+			body-=mouth;
+			res+=min(eye/2,body);
+			cout<<res<<endl;
+		}
+	}
 }
