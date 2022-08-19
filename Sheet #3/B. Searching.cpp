@@ -8,5 +8,6 @@ int main(){
 		cin>>ele;
 	}
 	cin>>x;
-	for(int k=1 ;i<=n;k++)
+	for(int k=1 ;i<=n;k++){
+	}
 }
