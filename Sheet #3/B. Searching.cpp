@@ -1,13 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
-	int n,x;
-	cin>>n;
-	for(int i=1;i<=n;i++){
-		int ele;
-		cin>>ele;
+int numOfEle;
+cin>>numOfEle;
+int flag =0;
+int arr[numOfEle];
+for (int i=0;i<numOfEle;i++){
+	cin>>arr[i];
+}
+int search;
+cin>>search;
+for(int i=0;i<numOfEle;i++){
+	if(arr[i]==search){
+		cout<<i<<endl;
+		flag=1;
+		break;
 	}
-	cin>>x;
-	for(int k=1 ;i<=n;k++){
-	}
+}
+if(flag == 0){
+	cout<<-1<<endl;
+}
 }
