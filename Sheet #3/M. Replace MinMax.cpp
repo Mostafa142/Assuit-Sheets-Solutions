@@ -7,13 +7,23 @@ int arr[numOfEle];
 for (int i=0;i<numOfEle;i++){
 	cin>>arr[i];
 }
-int num = arr[0];
-int pos = 1;
-for(int i=1;i<numOfEle;i++){
-	if(arr[i]<num){
-		num=arr[i];
-		pos = i;
+int min = arr[0];
+int max = arr[0];
+int maxPos = 0;
+int minPos = 0;
+for(int i=0;i<numOfEle;i++){
+	if(min>arr[i]){
+		min = arr[i];
+		minPos = i;
+	}
+	if(max < arr[i]){
+		max=arr[i];
+		maxPos=i;
 	}
 }
-cout<<num<<" "<<pos<<endl;
+arr[minPos] = max;
+arr[maxPos] =min;
+for(int i=0;i<numOfEle;i++){
+	cout<<arr[i]<<" ";
+}
 }
